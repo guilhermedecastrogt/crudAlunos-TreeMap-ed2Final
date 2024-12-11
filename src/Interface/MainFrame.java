@@ -14,7 +14,7 @@ public class MainFrame extends JFrame {
 
     public MainFrame() {
         setTitle("CRUD Alunos");
-        setSize(800, 600);
+        setSize(1200, 700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new GridBagLayout());
 

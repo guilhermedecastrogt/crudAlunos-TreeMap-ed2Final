@@ -33,7 +33,7 @@ public class AlunoCrudFrame extends JFrame {
         this.cursoRepo = cursoRepo;
 
         setTitle("Gerenciar Alunos");
-        setSize(800, 600);
+        setSize(1200, 600);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
 

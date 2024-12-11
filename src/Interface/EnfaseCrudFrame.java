@@ -36,7 +36,7 @@ public class EnfaseCrudFrame extends JFrame {
         JButton btnIncluir = new JButton("Incluir");
         JButton btnAlterar = new JButton("Alterar");
         JButton btnExcluir = new JButton("Excluir");
-        JButton btnBuscar = new JButton("Buscar");
+        //JButton btnBuscar = new JButton("Buscar");
 
         gbc.gridx = 0;
         gbc.gridy = 0;
@@ -62,8 +62,8 @@ public class EnfaseCrudFrame extends JFrame {
         gbc.gridy = 2;
         topPanel.add(btnExcluir, gbc);
 
-        gbc.gridy = 3;
-        topPanel.add(btnBuscar, gbc);
+        //gbc.gridy = 3;
+        //topPanel.add(btnBuscar, gbc);
 
         JPanel tablePanel = new JPanel(new BorderLayout());
         tablePanel.setBorder(BorderFactory.createTitledBorder("Lista de Ênfases"));
