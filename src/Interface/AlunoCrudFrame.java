@@ -33,7 +33,7 @@ public class AlunoCrudFrame extends JFrame {
         this.cursoRepo = cursoRepo;
 
         setTitle("Gerenciar Alunos");
-        setSize(1200, 600);
+        setSize(800, 600);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(new BorderLayout(10, 10));
 
@@ -168,8 +168,23 @@ public class AlunoCrudFrame extends JFrame {
                     txtNome.setText(tableModel.getValueAt(selectedRow, 1).toString());
                     cbTurno.setSelectedItem(Turno.valueOf(tableModel.getValueAt(selectedRow, 2).toString()));
                     txtPeriodo.setText(tableModel.getValueAt(selectedRow, 3).toString());
-                    cbEnfase.setSelectedItem(enfaseRepo.getEnfase(tableModel.getValueAt(selectedRow, 4).toString()));
-                    cbCurso.setSelectedItem(cursoRepo.getCurso(tableModel.getValueAt(selectedRow, 5).toString()));
+
+                    // Atualiza os JComboBox de Ênfase e Curso
+                    String enfaseNome = tableModel.getValueAt(selectedRow, 4).toString();
+                    for (int i = 0; i < cbEnfase.getItemCount(); i++) {
+                        if (cbEnfase.getItemAt(i).getNome().equals(enfaseNome)) {
+                            cbEnfase.setSelectedIndex(i);
+                            break;
+                        }
+                    }
+
+                    String cursoNome = tableModel.getValueAt(selectedRow, 5).toString();
+                    for (int i = 0; i < cbCurso.getItemCount(); i++) {
+                        if (cbCurso.getItemAt(i).getNome().equals(cursoNome)) {
+                            cbCurso.setSelectedIndex(i);
+                            break;
+                        }
+                    }
                 }
             }
         });
